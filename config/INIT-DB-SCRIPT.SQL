@@ -1,0 +1,32 @@
+CREATE TABLE sample_bulletin (
+  id    INTEGER NOT NULL AUTO_INCREMENT,
+  user_id int(11) DEFAULT NULL,
+  name  VARCHAR(16) DEFAULT NULL,
+  title VARCHAR(32) NOT NULL,  
+  body  VARCHAR(200) NOT NULL,
+  image VARCHAR(40) DEFAULT NULL, 
+  pass  VARCHAR(255) DEFAULT NULL,
+  is_deleted TINYINT(1) DEFAULT 0,
+  created_at DATETIME NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+CREATE TABLE `users` (
+  `id`    INT(11) NOT NULL AUTO_INCREMENT,
+  `name`  VARCHAR(16) DEFAULT NULL,
+  `email` VARCHAR(255) DEFAULT NULL,
+  `pass`  VARCHAR(255) DEFAULT NULL,
+  UNIQUE KEY `email` (`email`),
+  KEY `id` (`id`)
+) ENGINE=InnoDB
+
+CREATE TABLE `pre_users` (
+  `id`    INT(11) NOT NULL AUTO_INCREMENT,
+  `token` VARCHAR(128) DEFAULT NULL,
+  `name`  VARCHAR(16) DEFAULT NULL,
+  `email` VARCHAR(255) DEFAULT NULL,
+  `pass`  VARCHAR(255) DEFAULT NULL,
+  `date`  DATETIME DEFAULT NULL,
+  `flag`  TINYINT(1) DEFAULT 1,
+  KEY `id` (`id`)
+) ENGINE=InnoDB

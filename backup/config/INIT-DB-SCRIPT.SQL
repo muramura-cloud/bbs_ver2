@@ -1,0 +1,10 @@
+CREATE TABLE sample_bulletin (
+  id    INTEGER NOT NULL AUTO_INCREMENT,
+  title VARCHAR(32) NOT NULL,  
+  body  VARCHAR(200) NOT NULL,
+  image VARCHAR(40) DEFAULT NULL, 
+  pass  VARCHAR(40) DEFAULT NULL,
+  is_deleted TINYINT(1) DEFAULT 0,
+  created_at DATETIME NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB;

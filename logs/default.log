@@ -1,0 +1,92 @@
+[2020/10/09 20:15:18] E_ERROR 172.28.128.1 /bbs/ebine_bbs6/post.php 500 Internal Server Error Uploader_File::setDir() Failed to create directory '/var/www/html/bbs/ebine_bbs6/upload/bulletin'.
+[2020/10/20 18:33:12] E_NOTICE 172.28.128.1 /bbs/index.php?page=1 Undefined property: Storage_Database_MySQL::$conn file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 43
+[2020/10/20 18:33:12] E_WARNING 172.28.128.1 /bbs/index.php?page=1 mysqli_query() expects parameter 1 to be mysqli, null given file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 43
+[2020/10/20 18:33:12] E_WARNING 172.28.128.1 /bbs/index.php?page=1 mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 50
+[2020/10/20 18:33:12] E_ERROR 172.28.128.1 /bbs/index.php?page=1 500 Internal Server Error Storage_Database_MySQL::getCount() failed.
+[2020/10/20 18:33:27] E_NOTICE 172.28.128.1 /bbs/index.php?page=1 Undefined property: Storage_Database_MySQL::$conn file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 43
+[2020/10/20 18:33:27] E_WARNING 172.28.128.1 /bbs/index.php?page=1 mysqli_query() expects parameter 1 to be mysqli, null given file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 43
+[2020/10/20 18:33:27] E_WARNING 172.28.128.1 /bbs/index.php?page=1 mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 50
+[2020/10/20 18:33:27] E_ERROR 172.28.128.1 /bbs/index.php?page=1 500 Internal Server Error Storage_Database_MySQL::getCount() failed.
+[2020/10/20 21:27:26] E_WARNING 172.28.128.1 /bbs/edit.php Invalid argument supplied for foreach() file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 264
+[2020/10/20 21:27:26] E_WARNING 172.28.128.1 /bbs/edit.php Invalid argument supplied for foreach() file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 275
+[2020/10/20 21:27:26] E_NOTICE 172.28.128.1 /bbs/edit.php Array to string conversion file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 288
+[2020/10/20 21:27:26] E_ERROR 172.28.128.1 /bbs/edit.php 500 Internal Server Error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY 0 Array' at line 1
+[2020/10/20 21:33:50] E_WARNING 172.28.128.1 /bbs/edit.php Invalid argument supplied for foreach() file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 256
+[2020/10/20 21:33:50] E_WARNING 172.28.128.1 /bbs/edit.php Invalid argument supplied for foreach() file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 267
+[2020/10/20 21:33:50] E_NOTICE 172.28.128.1 /bbs/edit.php Array to string conversion file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 280
+[2020/10/20 21:33:50] E_ERROR 172.28.128.1 /bbs/edit.php 500 Internal Server Error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY 0 Array' at line 1
+[2020/10/20 21:34:41] E_WARNING 172.28.128.1 /bbs/edit.php Invalid argument supplied for foreach() file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 258
+[2020/10/20 21:34:41] E_WARNING 172.28.128.1 /bbs/edit.php Invalid argument supplied for foreach() file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 269
+[2020/10/20 21:34:41] E_NOTICE 172.28.128.1 /bbs/edit.php Array to string conversion file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 282
+[2020/10/20 21:34:41] E_ERROR 172.28.128.1 /bbs/edit.php 500 Internal Server Error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY 0 Array' at line 1
+[2020/10/20 21:36:24] E_WARNING 172.28.128.1 /bbs/delete.php Invalid argument supplied for foreach() file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 258
+[2020/10/20 21:36:24] E_WARNING 172.28.128.1 /bbs/delete.php Invalid argument supplied for foreach() file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 269
+[2020/10/20 21:36:24] E_NOTICE 172.28.128.1 /bbs/delete.php Array to string conversion file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 282
+[2020/10/20 21:36:24] E_ERROR 172.28.128.1 /bbs/delete.php 500 Internal Server Error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY 0 Array' at line 1
+[2020/10/20 21:46:58] E_WARNING 172.28.128.1 /bbs/delete.php rename(/var/www/html/bbs/upload/bulletin/aIqda3xVr0Y5n8kL.jpeg,/var/www/html/bbs/upload/bulletin_deleted/aIqda3xVr0Y5n8kL.jpeg): No such file or directory file: /var/www/html/bbs/lib/Uploader/File.php line: 159
+[2020/10/20 21:46:58] E_ERROR 172.28.128.1 /bbs/delete.php 500 Internal Server Error Uploader_File::delete() Failed to move a file. '/var/www/html/bbs/upload/bulletin/aIqda3xVr0Y5n8kL.jpeg' -> '/var/www/html/bbs/upload/bulletin_deleted/aIqda3xVr0Y5n8kL.jpeg'
+[2020/10/20 22:04:12] E_ERROR 172.28.128.1 /bbs/index.php?page=1 500 Internal Server Error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FRO sample_bulletin WHERE is_deleted = ?' at line 1
+[2020/10/20 22:06:15] E_ERROR 172.28.128.1 /bbs/index.php?page=1 500 Internal Server Error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FRO sample_bulletin WHERE is_deleted = ?' at line 1
+[2020/10/21 16:15:24] E_NOTICE 172.28.128.1 /bbs/index.php?page=%E3%81%B8%E3%81%A3l 404 Not Found 
+[2020/10/21 16:22:41] E_NOTICE 172.28.128.1 /bbs/index.php Undefined variable: hos file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 165
+[2020/10/21 16:22:41] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error SQLSTATE[HY000] [2002] No such file or directory
+[2020/10/21 16:23:33] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error could not find driver
+[2020/10/21 16:24:29] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error could not find driver
+[2020/10/21 16:24:39] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error could not find driver
+[2020/10/21 16:28:34] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error could not find driver
+[2020/10/21 16:28:41] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error could not find driver
+[2020/10/21 16:29:39] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error could not find driver
+[2020/10/21 16:30:17] E_NOTICE 172.28.128.1 /bbs/index.php Undefined variable: hos file: /var/www/html/bbs/lib/Storage/Database/MySQL.php line: 165
+[2020/10/21 16:30:17] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error SQLSTATE[HY000] [2002] No such file or directory
+[2020/10/21 16:34:49] E_USER_ERROR 172.28.128.1 /bbs/post.php Controller_Base::render() Template not found: index.php file: /var/www/html/bbs/lib/Controller/Base.php line: 275
+[2020/10/21 16:35:18] E_NOTICE 172.28.128.1 /bbs/post.php Undefined variable: comments file: /var/www/html/bbs/html/bulletin/index.php line: 7
+[2020/10/21 16:35:18] E_NOTICE 172.28.128.1 /bbs/post.php Undefined variable: pager file: /var/www/html/bbs/html/common/pager.php line: 2
+[2020/10/21 16:35:46] E_NOTICE 172.28.128.1 /bbs/post.php Undefined variable: comments file: /var/www/html/bbs/html/bulletin/index.php line: 7
+[2020/10/21 16:35:46] E_NOTICE 172.28.128.1 /bbs/post.php Undefined variable: pager file: /var/www/html/bbs/html/common/pager.php line: 2
+[2020/10/21 16:48:08] E_ERROR 172.28.128.1 /bbs/index.php 500 Internal Server Error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELET COUNT(*) AS cnt FROM sample_bulletin WHERE is_deleted = ?' at line 1
+[2020/10/21 20:19:33] E_ERROR 172.28.128.1 /bbs/register.php 500 Internal Server Error Controller_Base::execute() Action not found. 'register'
+[2020/10/21 23:47:39] E_NOTICE 172.28.128.1 /bbs/register.php Undefined variable: page file: /var/www/html/bbs/html/bulletin/form_register.php line: 21
+[2020/10/21 23:48:16] E_NOTICE 172.28.128.1 /bbs/register.php Undefined variable: page file: /var/www/html/bbs/html/bulletin/form_register.php line: 21
+[2020/10/21 23:55:22] E_NOTICE 172.28.128.1 /bbs/register.php Undefined variable: page file: /var/www/html/bbs/html/bulletin/form_register.php line: 21
+[2020/10/21 23:55:37] E_NOTICE 172.28.128.1 /bbs/register.php Undefined variable: page file: /var/www/html/bbs/html/bulletin/form_register.php line: 21
+[2020/10/22 00:51:00] E_ERROR 172.28.128.1 /bbs/register.php 500 Internal Server Error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'created_at' in 'field list'
+[2020/10/22 01:17:17] E_ERROR 172.28.128.1 /bbs/register.php 500 Internal Server Error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'clu363721@gmail.com' for key 'email'
+[2020/10/22 15:42:57] E_NOTICE 172.28.128.1 /bbs/register.php Undefined variable: headrs file: /var/www/html/bbs/classes/Controller/Users.php line: 47
+[2020/10/22 20:25:47] E_NOTICE 172.28.128.1 /bbs/login.php Undefined variable: name file: /var/www/html/bbs/html/bulletin/login.php line: 9
+[2020/10/22 20:25:47] E_NOTICE 172.28.128.1 /bbs/login.php Undefined variable: email file: /var/www/html/bbs/html/bulletin/login.php line: 13
+[2020/10/22 20:25:47] E_NOTICE 172.28.128.1 /bbs/login.php Undefined variable: pass file: /var/www/html/bbs/html/bulletin/login.php line: 17
+[2020/10/22 20:25:47] E_NOTICE 172.28.128.1 /bbs/login.php Undefined variable: page file: /var/www/html/bbs/html/bulletin/login.php line: 22
+[2020/10/22 21:47:29] E_NOTICE 172.28.128.1 /bbs/login.php?page= Undefined offset: 0 file: /var/www/html/bbs/classes/Storage/Users.php line: 98
+[2020/10/22 22:29:29] E_NOTICE 172.28.128.1 /bbs/login.php Undefined offset: 0 file: /var/www/html/bbs/classes/Storage/Users.php line: 99
+[2020/10/22 22:30:11] E_NOTICE 172.28.128.1 /bbs/login.php Undefined offset: 0 file: /var/www/html/bbs/classes/Storage/Users.php line: 100
+[2020/10/22 22:30:21] E_NOTICE 172.28.128.1 /bbs/login.php Undefined offset: 0 file: /var/www/html/bbs/classes/Storage/Users.php line: 100
+[2020/10/22 22:30:49] E_NOTICE 172.28.128.1 /bbs/login.php Undefined offset: 0 file: /var/www/html/bbs/classes/Storage/Users.php line: 99
+[2020/10/22 22:32:16] E_NOTICE 172.28.128.1 /bbs/login.php Undefined offset: 0 file: /var/www/html/bbs/classes/Storage/Users.php line: 99
+[2020/10/23 00:28:08] E_NOTICE 172.28.128.1 /bbs/post.php Undefined variable: isLogin file: /var/www/html/bbs/html/bulletin/form.php line: 13
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 01:42:19] E_NOTICE 172.28.128.1 /bbs/index.php? Undefined index: login_user file: /var/www/html/bbs/classes/Controller/Bulletin.php line: 64
+[2020/10/23 10:33:36] E_NOTICE 172.28.128.1 /bbs/index.php Undefined index: member_id file: /var/www/html/bbs/html/bulletin/index.php line: 24
+[2020/10/23 11:56:28] E_NOTICE 172.28.128.1 /bbs/edit.php Undefined variable: user_name file: /var/www/html/bbs/html/bulletin/form.php line: 14
+[2020/10/23 11:56:44] E_NOTICE 172.28.128.1 /bbs/edit.php Undefined variable: user_name file: /var/www/html/bbs/html/bulletin/form.php line: 14
+[2020/10/23 17:51:06] E_NOTICE 172.28.128.1 /bbs/register.php?page= Undefined variable: registered file: /var/www/html/bbs/html/bulletin/register.php line: 44
+[2020/10/23 18:09:36] E_ERROR 172.28.128.1 /bbs/register.php?token=9e 500 Internal Server Error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flag' in 'field list'
+[2020/10/23 18:09:50] E_ERROR 172.28.128.1 /bbs/register.php?token=9e 500 Internal Server Error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flag' in 'field list'
+[2020/10/23 18:12:45] E_ERROR 172.28.128.1 /bbs/register.php?token=9e 500 Internal Server Error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flag' in 'field list'
+[2020/10/23 18:13:29] E_ERROR 172.28.128.1 /bbs/register.php?token=9e 500 Internal Server Error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flag' in 'field list'
+[2020/10/23 18:13:39] E_ERROR 172.28.128.1 /bbs/register.php?token=9e 500 Internal Server Error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flag' in 'field list'
+[2020/10/23 18:14:10] E_ERROR 172.28.128.1 /bbs/register.php?token=9e 500 Internal Server Error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flag' in 'field list'
+[2020/10/23 18:22:05] E_ERROR 172.28.128.1 /bbs/register.php?token=b8 500 Internal Server Error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'clu363721@gmail.com' for key 'email'
+[2020/10/23 18:26:10] E_ERROR 172.28.128.1 /bbs/register.php?token=d3 500 Internal Server Error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'clu363721@gmail.com' for key 'email'
+[2020/10/23 18:29:41] E_ERROR 172.28.128.1 /bbs/register.php?token=d3 500 Internal Server Error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'clu363721@gmail.com' for key 'email'
+[2020/10/24 19:39:23] E_ERROR 172.28.128.1 /bbs/pre_register.php?page= 500 Internal Server Error Controller_Base::execute() Action not found. 'pre_register'
+[2020/10/24 19:45:45] E_NOTICE 172.28.128.1 /bbs/pre_register.php?page= Undefined variable: do_confirm file: /var/www/html/bbs/html/bulletin/register.php line: 7
+[2020/10/24 19:45:45] E_NOTICE 172.28.128.1 /bbs/pre_register.php?page= Undefined variable: do_register file: /var/www/html/bbs/html/bulletin/register.php line: 37
+[2020/10/24 19:45:45] E_NOTICE 172.28.128.1 /bbs/pre_register.php?page= Undefined variable: registered file: /var/www/html/bbs/html/bulletin/register.php line: 44
