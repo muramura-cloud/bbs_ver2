@@ -3,7 +3,7 @@
 // 仮に、Storage_Bulletin２みたいなのが必要になった時に、このファイルにStorage_BulletinとStorage_Bulletin２での共通処理を書いておけば、修正する時に楽。
 abstract class Storage_Base
 {
-    // ここにはStorage_Database_MySQLインスタンスが入り、データベースを操作するメソッドと$dbhとデータベースの接続設定がプロパティとしてセットされている。
+    // ここにはStorage_Database_MySQLインスタンスが入り、データベースを操作するメソッドと$dbhとデータベースの接続設定がプロパティとしてセットされる。
     protected $database  = null;
 
     protected $tableName = '';

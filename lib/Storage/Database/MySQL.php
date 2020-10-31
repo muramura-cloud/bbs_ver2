@@ -10,7 +10,7 @@ class Storage_Database_MySQL extends Storage_Database
             $config['charset'] = 'utf8';
         }
 
-        // 親クラスのコンストラクをオーバーライドさせないため。
+        // 親クラスのコンストラクタをオーバーライドさせないため。
         parent::__construct($config);
     }
 
