@@ -28,7 +28,6 @@ class ClassLoader
         foreach ($includePaths as $includePath) {
             $fullPath = $includePath . DIRECTORY_SEPARATOR . $filePath;
 
-            // ファイルが存在して読み込み可能かどうかを確認して読み込めるなら読み込む
             if (is_readable($fullPath)) {
                 require_once($fullPath);
                 break;

@@ -1,6 +1,5 @@
 <?php
 
-// 内部でurlを組み立てている。
 class Pager
 {
     // /bbs/ebine_bbs6/index.phpとか /bbs/ebine_bbs6/delete.phpとかが入る
@@ -81,7 +80,6 @@ class Pager
     {
         if (!is_natural_number($itemsCount, true)) {
             // trigger_errorはユーザーレベルのエラーメッセージを生成してエラーハンドル（コントローラーで設定した）に報告する
-            // __METHOD__は自分自身のメソッド名setItemsCountのこと
             trigger_error(__METHOD__ . '() Invalid number: ' . $itemsCount, E_USER_WARNING);
             $itemsCount = 0;
         }
@@ -212,23 +210,18 @@ class Pager
     {
         $total = $this->totalPage;
 
-        // 早期リターンしている。
         if ($total <= 1) {
             return [];
         }
 
-        // $sizeが５として$middleが３とする
         $middle  = (int)ceil($this->windowSize / 2);
         $current = $this->currentPage;
         $size    = $this->windowSize;
 
-        // 場合分けをすることによって処理がシンプルになっている。
-        // min()とmax()を使うとシンプルに場合分けができる。
         if ($current <= $middle) {
             $start = 1;
             $end   = min($size, $total);
         } else {
-            // $size - $middleは次ボタンの数
             $end   = min($total, $current + ($size - $middle));
             $start = max(1, $end - ($size - 1));
         }

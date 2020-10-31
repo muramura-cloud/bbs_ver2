@@ -13,11 +13,7 @@ class Storage_Database_MySQL extends Storage_Database
         // 親クラスのコンストラクをオーバーライドさせないため。
         parent::__construct($config);
     }
-    // これらは全部$databaseプロパティ（Storage_Database_MySQLインスタンス）のメソッドになる。要するにはラップ（Storage_BulletinやStorage_Baseのメソッドとして用意する）しないとこのままじゃコントローラーで使えないということ。
-    // メソッドの引数にテーブル名を受け取るよにすることで、データベースに関数処理とテーブル名の定義を分離することができる。
-    // 仮に、内部で$this->table_nameを使ってしまうと、このメソッドは必ずテーブル名がプロパティとしてセットされているクラスで定義されないといけなくなる。
-    // その場合、アプリケーションに依存するクラスStorage_Bulletin２が追加された時に毎回のこれらのメソッドをそのクラスに書かなくてはならない。
-    // メソッドごと例外を明示的にスローする必要はない。なぜならPDOの設定で自動的にやってくれるから。
+
     public function getRecords($table_name, $wheres = [], $orders = [], $limit = [], $column = '*')
     {
         $sql    = "SELECT {$column} FROM {$table_name}";
@@ -152,7 +148,6 @@ class Storage_Database_MySQL extends Storage_Database
         return $params;
     }
 
-    // データベースの設定を取得,PDO関連のエラーを一応ログに書き込まれているけど、具体的どこのメソッドでエラーが起きているのかわかないな。
     protected function connect()
     {
         $config = $this->config;

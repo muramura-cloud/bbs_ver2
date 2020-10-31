@@ -5,7 +5,6 @@ class Storage_Users extends Storage_Base
 {
     protected $tableName = 'users';
 
-    // ここは投稿テーブルに保存されるデータのルール。ユーザー情報のついてのルールはここで定義するべきでない気がする。
     private $validationRules = [
         'name' => [
             'name'  => '名前',
@@ -41,8 +40,6 @@ class Storage_Users extends Storage_Base
         return $rules;
     }
 
-    // 仮登録のデータベースのパスワード既にハッシュ化ずみなのでここで再度ハッシュかする必要ない気がした。オプションでパスワードをハッシュ化するか選べるようにした。
-    // トークンによって取得したデータはハッシュ化しない。
     public function insertUser($data, $hash_password = true)
     {
         if ($hash_password && isset($data['pass'])) {

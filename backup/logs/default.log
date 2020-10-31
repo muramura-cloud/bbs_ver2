@@ -1,1 +1,0 @@
-[2020/10/09 20:15:18] E_ERROR 172.28.128.1 /bbs/ebine_bbs6/post.php 500 Internal Server Error Uploader_File::setDir() Failed to create directory '/var/www/html/bbs/ebine_bbs6/upload/bulletin'.

@@ -86,8 +86,7 @@ function get_db_config() {
     return $config;
 }
 
-// include_pathはrequire()、include()、fopen()、file_get_contents()などのPHPのファイルを読み込む関数がファイルを検索するディレクトリのことで
-// この関数はそのディレクトリを追加するための関数
+// include_pathはrequire()、include()、fopen()、file_get_contents()などのPHPのファイルを読み込む関数がファイルを検索するディレクトリのことで、この関数はそのディレクトリを追加するための関数
 function add_include_path($path, $prepend = false) {
     $current = get_include_path();
 

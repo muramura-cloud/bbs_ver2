@@ -61,17 +61,8 @@ class Controller_Bulletin extends Controller_Base
             ]
         );
 
-        // Storage_Bulletinのプロパティ
-        // table名
-        // Storage_Database_MySQLクラスのプロパティ
-        // データベースハンドラ
-        // データベースの接続情報
-        // ページネーションクラスのプロパティ。具体的にはpageUri（/bbs/ebine_bbs6/index.php、デフォルトでprotected $pageUri = '/'となっている）と現在ページ番号（デフォルト）と１ページあたり何個投稿を表示するかとか、
-        // このメソッド内で入手した$pageと$comments（投稿データ10件まで）
-        // get_defined_vars()は今まで定義された変数を全て配列として取得する。クラス内で定義したプロパティも含める。主に上の列挙した変数。
         $this->render('bulletin/index.php', get_defined_vars());
 
-        // ログインしている人には全く別にページを読み込ませれば良いのかな？
     }
 
     // 投稿を保存してダメだった時に投稿フォームを表示するアクション

@@ -90,3 +90,15 @@
 [2020/10/24 19:45:45] E_NOTICE 172.28.128.1 /bbs/pre_register.php?page= Undefined variable: do_confirm file: /var/www/html/bbs/html/bulletin/register.php line: 7
 [2020/10/24 19:45:45] E_NOTICE 172.28.128.1 /bbs/pre_register.php?page= Undefined variable: do_register file: /var/www/html/bbs/html/bulletin/register.php line: 37
 [2020/10/24 19:45:45] E_NOTICE 172.28.128.1 /bbs/pre_register.php?page= Undefined variable: registered file: /var/www/html/bbs/html/bulletin/register.php line: 44
+[2020/10/31 08:24:35] E_WARNING 172.28.128.1 /bbs_ver2/delete.php 400 Bad Request 
+[2020/10/31 09:17:23] E_NOTICE 172.28.128.1 /bbs_ver2/register.php?page=1&token=5c0e23c489487a6ea1e73fbba23a3d73028b303d56801aad9a7ab467a33fc90c Undefined variable: do_confirm file: /var/www/html/bbs_ver2/html/bulletin/register.php line: 7
+[2020/10/31 09:17:23] E_NOTICE 172.28.128.1 /bbs_ver2/register.php?page=1&token=5c0e23c489487a6ea1e73fbba23a3d73028b303d56801aad9a7ab467a33fc90c Undefined variable: pre_register file: /var/www/html/bbs_ver2/html/bulletin/register.php line: 37
+[2020/10/31 09:19:58] E_ERROR 172.28.128.1 /bbs_ver2/register.php?page=1&token=5c0e23c489487a6ea1e73fbba23a3d73028b303d56801aad9a7ab467a33fc90c 500 Internal Server Error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'clu363721@gmail.com' for key 'email'
+[2020/10/31 09:30:05] E_NOTICE 172.28.128.1 /bbs_ver2/register.php?page=1&token=y%2410%24eD%2FfsFk Undefined variable: name file: /var/www/html/bbs_ver2/html/bulletin/register.php line: 56
+[2020/10/31 09:30:05] E_NOTICE 172.28.128.1 /bbs_ver2/register.php?page=1&token=y%2410%24eD%2FfsFk Undefined variable: email file: /var/www/html/bbs_ver2/html/bulletin/register.php line: 60
+[2020/10/31 09:30:05] E_NOTICE 172.28.128.1 /bbs_ver2/register.php?page=1&token=y%2410%24eD%2FfsFk Undefined variable: pass file: /var/www/html/bbs_ver2/html/bulletin/register.php line: 64
+[2020/10/31 09:33:30] E_NOTICE 172.28.128.1 /bbs_ver2/register.php?page=1&token=y%2410%24eD%2FfsFk Undefined variable: email file: /var/www/html/bbs_ver2/html/bulletin/register.php line: 60
+[2020/10/31 09:33:30] E_NOTICE 172.28.128.1 /bbs_ver2/register.php?page=1&token=y%2410%24eD%2FfsFk Undefined variable: pass file: /var/www/html/bbs_ver2/html/bulletin/register.php line: 64
+[2020/10/31 09:35:59] E_ERROR 172.28.128.1 /bbs_ver2/register.php?page=1&token=5c0e23c489487a6ea1e73fbba23a3d73028b303d56801aad9a7ab467a33fc90c 500 Internal Server Error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'clu363721@gmail.com' for key 'email'
+[2020/10/31 09:49:21] E_ERROR 172.28.128.1 /bbs_ver2/register.php?page=1&token=110b2fb5c6916674829c75f044d6debb5e822a6d7927ce5ffee73f5442ddbca5 500 Internal Server Error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'clu363721@gmail.com' for key 'email'
+[2020/10/31 09:50:48] E_ERROR 172.28.128.1 /bbs_ver2/register.php?page=1&token=110b2fb5c6916674829c75f044d6debb5e822a6d7927ce5ffee73f5442ddbca5 500 Internal Server Error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'clu363721@gmail.com' for key 'email'

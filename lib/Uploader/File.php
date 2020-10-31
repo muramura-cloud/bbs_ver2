@@ -1,8 +1,6 @@
 <?php
 
-// これはこれ単体で使う場合もあるから抽象クラスではない
-// ここで$_FILESを参照すると
-// 画像データを受け取って自分が指定したディレクトリに画像を移動させることがしごと
+// ここで$_FILESを参照するとそれはネットに依存するコードになってしまい、テストができない、グローバル変数は外部から受け取る必要がある。
 class Uploader_File
 {
     const UPLOAD_DIR_NAME = 'upload';
@@ -15,7 +13,6 @@ class Uploader_File
     protected $uploadDirPath = "";
 
     // デフォルトではuploadが画像の保存先になるが自分で何かしら別の保存先（今回だとbulletin）を用意したい時にはここの引数にそれディレクトリ名を入れる。
-    // コントローラーではupload/bulletinを引数に入れている。
     public function __construct($dir = null)
     {
         $this->setDir($dir);
@@ -56,7 +53,6 @@ class Uploader_File
             $exts = array($exts);
         }
 
-        // ビルトイン関数をマップに指定できるのか。
         $this->allowedExtensions = array_map('strtolower', $exts);
     }
 
@@ -113,13 +109,11 @@ class Uploader_File
         return ($toLowerCase) ? strtolower($ext) : $ext;
     }
 
-    // 画像のデータ（マジックナンバー）が$dataに入る。
     public function upload($data, $fileName)
     {
         // /var/www/html/bbs/ebine_bbs6/upload/bulletin/~
         $filePath = $this->uploadDirPath . '/' . $fileName;
 
-        // これは俺が実験的に追加した。保存先のディレクトリ(upload/bulletin)に権限を与えないとダメっぽい。
         chmod($this->uploadDirPath, 0777);
 
         // $dataを$filePathに書き込む
@@ -127,8 +121,6 @@ class Uploader_File
             throw new Exception(__METHOD__ . "() Failed to upload a file. '{$filePath}'");
         }
 
-        // 所有者自身、所有者が属するグループ、その他のユーザーに全ての権限を付与する
-        // 1 は実行権限、2 はファイルに対する書き込み権限、 4 はファイルに対する読み込み権限を与えます
         chmod($filePath, 0777);
 
         return true;

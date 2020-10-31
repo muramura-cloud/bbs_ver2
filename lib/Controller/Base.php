@@ -1,22 +1,17 @@
 <?php
 
 // 外部の入力をプロパティで管理、外部のサーバー情報をプロパティで管理、エラーの設定とエラーの記録、処理のスタートとページ遷移
-// セッション情報もプロパティとしてセットするから、そのメソッドも必要になるな。
 abstract class Controller_Base
 {
     // 序盤のsetEnvsでセットされる。
     protected $method = 'GET';
 
-    // ページ番号とかタイトルとか外部からの入力値がくる
     protected $params = [];
 
-    // 画像が入る。
     protected $files  = [];
-    // loggerクラスのインスタンスが入る。loggerクラスをアイテムとして入手している感じがした。
 
     protected $logger = null;
 
-    // 自分のサーバーの情報(ヘッダ、パス、スクリプトの位置のような 情報)がここのプロパティとしてセットされる。めっちゃ多い。
     protected $envs = [
         'http-host'       => 'localhost',
         'server-name'     => 'localhost',
@@ -128,7 +123,6 @@ abstract class Controller_Base
     // セッションをプロパティにセットするメソッド
     public function setSessions($sessions)
     {
-
         $this->sessions = $sessions;
     }
 
@@ -143,7 +137,6 @@ abstract class Controller_Base
     }
 
     // ロガーインスタンスを生成し、実行時エラーを設定（set_error_handler）している。
-    // このメソッドの中で全てが完結している。よってここで例外をキャッチしている。
     public function execute($action)
     {
         try {
@@ -159,7 +152,6 @@ abstract class Controller_Base
         }
     }
 
-    // $uriはindex.php$paramsは['page' => $page]、redirectとincludeの使い所の違いがまだあやふやかも
     public function redirect($uri, $params = [], $exit = true)
     {
         if (!empty($params)) {
@@ -207,7 +199,6 @@ abstract class Controller_Base
                 . $this->getEnv('Request-Uri') . ' '
                 . $message;
 
-            // ファイル名は指定していないのでdefault
             $this->logger->write($message, $errType);
         }
     }
@@ -273,9 +264,6 @@ abstract class Controller_Base
     {
         if ($template = $this->getTemplate($template_name)) {
             extract(array_merge(get_object_vars($this), $data), EXTR_OVERWRITE);
-
-            dump($this->sessions);
-
             include($template);
         } else {
             trigger_error(__METHOD__ . '() Template not found: ' . $name, E_USER_ERROR);
@@ -293,7 +281,6 @@ abstract class Controller_Base
         }
     }
 
-    // '_'を'-'へ置き換える。
     protected function normalizeEnvKey($key)
     {
         return strtolower(str_replace('_', '-', $key));

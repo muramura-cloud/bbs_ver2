@@ -5,43 +5,7 @@ class Storage_PreUsers extends Storage_Base
 {
     protected $tableName = 'pre_users';
 
-    // ここは投稿テーブルに保存されるデータのルール。ユーザー情報のついてのルールはここで定義するべきでない気がする。
-    private $validationRules = [
-        'name' => [
-            'name'  => '名前',
-            'rules' => [
-                'required' => true,
-                'length'   => ['min' => 3, 'max' => 16],
-            ],
-        ],
-        'email' => [
-            'name'  => 'メール',
-            'rules' => [
-                'required' => true,
-                'pattern'  => ['regex' => '/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', 'meaning' => 'RFCに準拠した形式'],
-            ],
-        ],
-        'pass' => [
-            'name'  => 'パスワード',
-            'rules' => [
-                'required' => true,
-                'pattern'  => ['regex' => '/^[0-9]{8,16}$/', 'meaning' => '半角8桁~16桁の数字'],
-            ],
-        ],
-    ];
-
-    // バリデーションルール取得するメソッドはどこテーブルクラスにおいても必要だからbaseで定義すれば？ってことはvalidationRulesはprotectedになるのかな？
-    public function getValidationRules($validation_keys)
-    {
-        $rules = [];
-        foreach ($validation_keys as $validation_key) {
-            $rules[$validation_key] = $this->validationRules[$validation_key];
-        }
-
-        return $rules;
-    }
-
-    // 仮テーブルにデータを保存する。送られてきたパスワードはハッシュかしていない。ここでハッシュ化するべきかな？
+    // 入力されたパスワードと日付とトークンを追加して仮テーブルに登録する
     public function insertPreUser($data)
     {
         if (!isset($data['token'])) {
@@ -59,6 +23,17 @@ class Storage_PreUsers extends Storage_Base
         $this->database->insertRecord($this->tableName, $data);
 
         return $data['token'];
+    }
+
+    public function deleteByToken($token)
+    {
+        $this->database->deleteRecord($this->tableName, [
+            [
+                'col_name' => 'token',
+                'operator' => '=',
+                'value'    => $token,
+            ]
+        ]);
     }
 
     public function getByToken($token)

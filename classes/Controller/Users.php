@@ -18,16 +18,15 @@ class Controller_Users extends Controller_Base
 
         $users      = new Storage_Users();
         $pre_users  = new Storage_PreUsers();
-        $validation = new Validation($pre_users->getValidationRules(['name', 'email', 'pass']));
+        $validation = new Validation($users->getValidationRules(['name', 'email', 'pass']));
 
-        $do_confirm      = $this->getParam('do_confirm') === '1';
-        $do_register     = $this->getParam('do_register') === '1';
-        $pre_registered  = false;
-        $registered      = false;
+        $do_confirm   = $this->getParam('do_confirm') === '1';
+        $pre_register = $this->getParam('pre_register') === '1';
+        $registered   = false;
 
         $errors = [];
 
-        if ($do_confirm || $do_register) {
+        if ($do_confirm || $pre_register) {
             $errors = $validation->validate($data);
 
             if ($users->sameAddressExists($email)) {
@@ -35,8 +34,7 @@ class Controller_Users extends Controller_Base
             }
         }
 
-        // 仮テーブルインスタンス生成して、仮テーブルに入力情報とトークンをを保存する。
-        if (empty($errors) && $do_register) {
+        if (empty($errors) && $pre_register) {
             $token = $pre_users->insertPreUser($data);
 
             mb_language("japanese");
@@ -51,10 +49,9 @@ class Controller_Users extends Controller_Base
             if (!mb_send_mail($to, $title, $message)) {
                 $this->log(__METHOD__ . '() Failed to send a mail.');
             } else {
-                $pre_registered = true;
+                echo 'メールを送信しました。';
             }
         }
-
 
         $this->render('bulletin/register.php', get_defined_vars());
     }
@@ -65,11 +62,9 @@ class Controller_Users extends Controller_Base
         $page  = $this->getParam('page');
         $token = $this->getParam('token');
 
-        $users      = new Storage_Users();
+        $users = new Storage_Users();
 
-        $do_confirm  = $this->getParam('do_confirm') === '1';
-        $do_register = $this->getParam('do_register') === '1';
-        $registered  = false;
+        $registered = false;
 
         $errors = [];
 
@@ -88,11 +83,14 @@ class Controller_Users extends Controller_Base
 
                     $users->insertUser($user, false);
                     $registered = true;
+
                 } else {
                     $errors[] = 'このリンクは期限切れで使えません。最初からやり直してください。';
                 }
+
+                $pre_users->deleteByToken($token);
             } else {
-                $errors[] = 'ユーザー情報が取得できませんでした。最初からやり直してください。';
+                $errors[] = 'ユーザー情報が取得できませんでした。最初から新規登録をやり直してください。';
             }
         }
 
@@ -126,11 +124,9 @@ class Controller_Users extends Controller_Base
     // 仮のログアウト機能
     public function logout()
     {
-        $page  = $this->getParam('page');
-
         $_SESSION['login_user'] = [];
         session_destroy();
 
-        $this->redirect('index.php', ['page' => $page]);
+        $this->redirect('index.php', ['page' => $this->getParam('page')]);
     }
 }

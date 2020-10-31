@@ -27,6 +27,5 @@ CREATE TABLE `pre_users` (
   `email` VARCHAR(255) DEFAULT NULL,
   `pass`  VARCHAR(255) DEFAULT NULL,
   `date`  DATETIME DEFAULT NULL,
-  `flag`  TINYINT(1) DEFAULT 1,
   KEY `id` (`id`)
 ) ENGINE=InnoDB

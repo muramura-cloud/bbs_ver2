@@ -28,7 +28,7 @@ abstract class Storage_Database
             $this->config = array_merge($this->config, get_db_config());
         }
 
-        // Storage_Database_MySQLクラスのメソッドを叩いている。データベースハンドラをセットしている。。
+        // Storage_Database_MySQLクラスのメソッドを叩いている。データベースハンドラをセットしている。
         $this->dbh = $this->connect();
     }
 }

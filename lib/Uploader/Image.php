@@ -1,7 +1,6 @@
 <?php
 
-// getAllowedTypes、isTypeValid、getTypeって全部画像の中身を確認するためのメソッドだよね多分。
-// 渡ってきた画像が指定した拡張子を満たしているのか画像の中身をチェックして独自の名前をセットして
+// このクラスは主に画像に中身をチェックするためのクラス。
 class Uploader_Image extends Uploader_File
 {
     protected $allowedTypes = ['jpeg', 'gif', 'png'];
